@@ -76,9 +76,11 @@ If you want to contribute or just use the code for your own applications and cus
     pyinstaller -w --onefile easy_pdf.py
     ```
     
-    However, PyInstaller warns that the app can be slower at the start with this option.
+    However, _PyInstaller_ warns that the app can be slower at the start with this option.
     
-- For Windows users who want to create an installation file, [Inno Setup](https://jrsoftware.org/isinfo.php) works great. It should be used with the _easy_pdf_ folder that PyInstaller generates.
+    Finally, note that _PyInstaller_ generates executables that are OS specific. For instance if you compile it on Windows, you will get a Windows executable.
+    
+- For Windows users who want to create an installation file, [Inno Setup](https://jrsoftware.org/isinfo.php) works great. It should be used with the _easy_pdf_ folder that _PyInstaller_ generates.
 
 - Be careful that when you run the app for the first time, a _params.txt_ file is generated in the same folder as either _easy_pdf.py_ or _easy_pdf.exe_ (depending on your usage). This file records the user's preferences in terms of language and default directory. So __it should be deleted if you plan to share the folder with anyone or before using _Inno Setup___. <br><br>
 
