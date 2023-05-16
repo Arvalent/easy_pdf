@@ -1,0 +1,8 @@
+python>=3.8
+tk
+fitz
+numpy
+pickle
+Pillow
+PyPDF2
+pywin32
