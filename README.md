@@ -59,12 +59,12 @@ If you want to contribute or just use the code for your own applications and cus
 
 ## Planned improvements
 
-[ ] Create a new button to remove a single file from the list in the merge configuration.
+[] Create a new button to remove a single file from the list in the merge configuration.
 
-[ ] Create a PDF viewer for the merge option so that the user can view the PDF by double clicking on the filename or by clicking on Enter.
+[] Create a PDF viewer for the merge option so that the user can view the PDF by double clicking on the filename or by clicking on Enter.
 
-[ ] Handle images so that images can be saved as PDF or even merged together in a PDF or even with other PDFs.
+[] Handle images so that images can be saved as PDF or even merged together in a PDF or even with other PDFs.
 
-[ ] Create a more flexible third option where you can merge and extract at the same time.
+[] Create a more flexible third option where you can merge and extract at the same time.
 
-[ ] Add another language ?
+[] Add another language ?
