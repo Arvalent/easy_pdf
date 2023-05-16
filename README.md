@@ -14,7 +14,7 @@ At the moment, it is available in French, English and German and it supports two
 
 - extract some pages from a PDF
 
-To get more details about the app usage and download an installation file (only Windows right now), go [here](https://github.com/Arvalent/easy_pdf_exe).
+To get more details about the app usage and download an installation file (only Windows right now), go [here](https://github.com/Arvalent/easy_pdf_exe). <br><br>
 
 
 ## The code
@@ -56,15 +56,41 @@ If you want to contribute or just use the code for your own applications and cus
 
     If you want to add an entire new language to the app, you are more than welcome!
 
+- If you want to create an executable folder or file, you can use [PyInstaller](https://pyinstaller.org/en/stable/). You can install it simply with:
+
+    ```bash
+    pip install -U pyinstaller
+    ```
+    
+    Then, to create the executable, I recommend using:
+    
+    ```bash
+    pyinstaller -w easy_pdf.py
+    ```
+    
+    This way you avoid having a terminal window that opens wih the app. You can remove the -w option though for debug mode.
+    
+    A bunch of files will be created and you need to copy paste _logo.ico_ and _up_arrow.png_ into ```dist/easy_pdf/```. The _easy_pdf.exe_ will be in the same directory. You can also create a single file instead of a whole directory with:
+    
+    ```bash
+    pyinstaller -w --onefile easy_pdf.py
+    ```
+    
+    However, PyInstaller warns that the app can be slower at the start with this option.
+    
+- For Windows users who want to create an installation file, [Inno Setup](https://jrsoftware.org/isinfo.php) works great. It should be used with the _easy_pdf_ folder that PyInstaller generates.
+
+- Be careful that when you run the app for the first time, a _params.txt_ file is generated in the same folder as either _easy_pdf.py_ or _easy_pdf.exe_ (depending on your usage). This file records the user's preferences in terms of language and default directory. So __it should be deleted if you plan to share the folder with anyone or before using _Inno Setup___. <br><br>
+
 
 ## Planned improvements
 
-[] Create a new button to remove a single file from the list in the merge configuration.
+- [ ] Create a new button to remove a single file from the list in the merge configuration.
 
-[] Create a PDF viewer for the merge option so that the user can view the PDF by double clicking on the filename or by clicking on Enter.
+- [ ] Create a PDF viewer for the merge option so that the user can view the PDF by double clicking on the filename or by clicking on Enter.
 
-[] Handle images so that images can be saved as PDF or even merged together in a PDF or even with other PDFs.
+- [ ] Handle images so that images can be saved as PDF or even merged together in a PDF or even with other PDFs.
 
-[] Create a more flexible third option where you can merge and extract at the same time.
+- [ ] Create a more flexible third option where you can merge and extract at the same time.
 
-[] Add another language ?
+- [ ] Add another language ?
